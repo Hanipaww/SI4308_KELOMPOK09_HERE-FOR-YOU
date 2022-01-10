@@ -25,7 +25,7 @@
   </div>
   
   <div class="w3-quarter">
-  <div class="w3-card w3-white">
+  <div class="w3-card w3-white " style="height: 600px">
     <img src="{{ asset('assets/image/hfy1.png') }}" alt="Snow" style="height:auto; width:100%">
     <div class="w3-container">
     <p style="text-align: justify; text-justify: inter-word; ">Siapa nih diantara kalian yang suka scrolling sosmed berjam-jam? Atau siapa yang sukanya nontonin
@@ -38,7 +38,7 @@
   </div>
   
   <div class="w3-quarter">
-  <div class="w3-card w3-white">
+  <div class="w3-card w3-white" style="height: 600px">
     <img src="{{ asset('assets/image/hfy4.png') }}" alt="Lights" style="height:auto; width:100%">
     <div class="w3-container">
     <p style="text-align: justify; text-justify: inter-word; ">tahukah kamu bahwa gaslighting juga dapat dilakukan oleh orangtuamu?</p>
@@ -49,7 +49,7 @@
   </div>
   
   <div class="w3-quarter">
-  <div class="w3-card w3-white">
+  <div class="w3-card w3-white" style="height: 600px">
     <img src="{{ asset('assets/image/hfy3.png') }}" alt="Mountains" style="height:auto; width:100%">
     <div class="w3-container">
     <p style="text-align: justify; text-justify: inter-word; ">pernah ngga sih kalian pusing tiap milih makanan di aplikasi ojol? Atau pusing mau nonton film/series apa buat nemenin makan? Atau bahkan bingung mau pake outfit apa tiap berpergian?</p>
@@ -65,7 +65,7 @@
     <h3 class="w3-center">TESTIMONI</h3>
     <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
       <div class="w3-col l3 m6 w3-margin-bottom">
-        <div class="w3-card text-center">
+        <div class="w3-card text-center" style="height: 500px">
           <img src="{{ asset('assets/image/t1.jpg') }}" alt="John" style="height: 200px; width: auto">
           <div class="w3-container">
             <h3>Tasya Farasya</h3>
@@ -75,7 +75,7 @@
         </div>
       </div>
       <div class="w3-col l3 m6 w3-margin-bottom">
-        <div class="w3-card text-center" >
+        <div class="w3-card text-center" style="height: 500px">
           <img src="{{ asset('assets/image/t2.jpg') }}" alt="Jane" style="height: 200px; width: auto">
           <div class="w3-container">
             <h3>Clarissa Putri</h3>
@@ -85,7 +85,7 @@
         </div>
       </div>
       <div class="w3-col l3 m6 w3-margin-bottom">
-        <div class="w3-card text-center">
+        <div class="w3-card text-center" style="height: 500px">
           <img src="{{ asset('assets/image/t3.jpg') }}" alt="Mike" style="height: 200px; width: auto">
           <div class="w3-container">
             <h3>Rachel Vennya</h3>
@@ -95,7 +95,7 @@
         </div>
       </div>
       <div class="w3-col l3 m6 w3-margin-bottom">
-        <div class="w3-card text-center">
+        <div class="w3-card text-center" style="height: 500px">
           <img src="{{ asset('assets/image/t4.jpg') }}" alt="Dan" style="height: 200px; width: auto">
           <div class="w3-container">
             <h3>Keanu Agl</h3>
@@ -115,27 +115,27 @@
     <div class="w3-row"><br>
     
     <div class="w3-quarter">
+      <img src="{{ asset('assets/image/yola.jpeg') }}" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Yolanda Hafitzhah</h3>
+      <p>1202190057</p>
+    </div>
+      
+    <div class="w3-quarter">
+      <img src="{{ asset('assets/image/salsa.jpeg') }}" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Salsabila Safitri</h3>
+      <p>1202194217</p>
+    </div>
+
+    <div class="w3-quarter">
       <img src="{{ asset('assets/image/PasFoto.jpeg') }}" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
       <h3>Nisrina Hanifah Salsabila</h3>
       <p>1202194306</p>
     </div>
     
     <div class="w3-quarter">
-      <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-      <h3>Rebecca Flex</h3>
-      <p>Support</p>
-    </div>
-    
-    <div class="w3-quarter">
-      <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-      <h3>Jan Ringo</h3>
-      <p>Boss man</p>
-    </div>
-    
-    <div class="w3-quarter">
-      <img src="/w3images/avatar.jpg" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
-      <h3>Kai Ringo</h3>
-      <p>Fixer</p>
+      <img src="{{ asset('assets/image/ninis.jpg') }}" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+      <h3>Nisrina Riznawati</h3>
+      <p>1202194326</p>
     </div>
     
     </div>
