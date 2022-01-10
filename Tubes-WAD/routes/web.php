@@ -18,11 +18,14 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth','isadmin'])->group(function () {
     Route::prefix('admin')->namespace('Admin')->name('admin.')->group(function () {
         Route::get('/','DashboardController')->name('dashboard');
         Route::resource('users',UserController::class);
-        Route::resource('banks',BankController::class);
+        Route::resource('banks',BankController::class)->except('show');
+        Route::get('banks/{id}/set','BankController@setStatus')->name('banks.set-status');
+        Route::resource('bookings',BookingController::class)->except('create','edit','update','store','show');
+        Route::get('bookings/{id}/set','BookingController@setStatus')->name('bookings.set-status');
         Route::resource('psychologists',PsychologistController::class);
         Route::get('psychologist/{id}/schedule/create','PsychologistScheduleController@create')->name('schedules.create');
         Route::post('psychologist/{id}/schedule/create','PsychologistScheduleController@store')->name('schedules.store');
@@ -35,3 +38,12 @@ Route::middleware(['auth'])->group(function () {
     });
 });
 Route::get('/','HomeController@index')->name('home');
+Route::get('/consultations', 'ConsultationController@index')->name('consultations.index');
+Route::get('/consultations/{id}', 'ConsultationController@show')->name('consultations.show');
+Route::get('/booking/{id}/process','BookingController@create')->name('booking.create');
+Route::middleware('auth')->group(function(){
+    Route::get('/history', 'HistoryController@index')->name('history.index');
+    Route::post('/consultation/rating', 'ConsultationController@rating')->name('consultation.rating');
+    Route::post('/booking/process','BookingController@store')->name('booking.store');
+    Route::get('/booking/{number}/success','BookingController@success')->name('booking.success');
+});

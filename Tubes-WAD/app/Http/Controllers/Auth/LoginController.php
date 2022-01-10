@@ -25,8 +25,8 @@ class LoginController extends Controller
     public function authenticated()
     {
         if(auth()->user()->role === 'user'){
-            Auth::logout();
-            return redirect()->route('login')->with('error','Anda login sebagai user, silahkan login sebagai admin');
+            // Auth::logout();
+            return redirect()->route('home');
         }
     }
 

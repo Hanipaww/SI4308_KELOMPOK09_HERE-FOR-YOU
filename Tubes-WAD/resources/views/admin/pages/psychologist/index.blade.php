@@ -17,6 +17,7 @@
                             <th class="text-center">Foto</th>
                             <th class="text-center">Nama</th>
                             <th class="text-center">Spesialis</th>
+                            <th class="text-center">Tarif (Jam)</th>
                             <th class="text-center">Email</th>
                             <th class="text-center">No. Telepon</th>
                             <th class="text-center">Alamat</th>
@@ -33,6 +34,7 @@
                                 </td>
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->specialist }}</td>
+                                <td>Rp. {{ number_format($item->price_hourly) }}</td>
                                 <td>{{ $item->email }}</td>
                                 <td>{{ $item->phone_number }}</td>
                                 <td>{{ $item->address }}</td>

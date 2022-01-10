@@ -55,6 +55,15 @@
                         @enderror
                     </div>
                     <div class="form-group">
+                        <label for="price_hourly">Tarif (Jam)</label>
+                        <input type="integer" name="price_hourly" id="price_hourly" class="form-control @error('price_hourly') is-invalid @enderror" value="{{ old('price_hourly') }}">
+                        @error('price_hourly')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+                    <div class="form-group">
                         <label for="status">Status</label>
                         <select name="status" id="status" class="form-control">
                             <option value="1" selected>Aktif</option>

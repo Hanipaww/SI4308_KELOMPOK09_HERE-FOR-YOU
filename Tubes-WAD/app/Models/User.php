@@ -45,13 +45,8 @@ class User extends Authenticatable
         }
     }
 
-    public function carts()
+    public function bookings()
     {
-        return $this->hasMany(Cart::class);
-    }
-
-    public function transactions()
-    {
-        return $this->hasMany(Transaction::class);
+        return $this->hasMany(Booking::class);
     }
 }

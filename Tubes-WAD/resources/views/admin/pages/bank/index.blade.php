@@ -18,7 +18,8 @@
                             <th class="text-center">Nama Bank</th>
                             <th class="text-center">No. Rekening</th>
                             <th class="text-center">Nama Pemilik</th>
-                            <th width="90" class="text-center">Action</th>
+                            <th class="text-center">Status</th>
+                            <th width="170" class="text-center">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -31,7 +32,19 @@
                                 <td>{{ $item->name }}</td>
                                 <td>{{ $item->number }}</td>
                                 <td>{{ $item->owner_name }}</td>
+                                <td>
+                                    @if ($item->status == 1)
+                                    <span class="badge badge-success">Aktif</span>
+                                    @else
+                                    <span class="badge badge-danger">Tidak Aktif</span>
+                                    @endif
+                                </td>
                                 <td class="text-center">
+                                    @if ($item->status == 1)
+                                    <a href="{{ route('admin.banks.set-status',$item->id) }}?status=0" class="btn btn-sm btn-secondary">Set Tidak Aktif</a>
+                                    @else
+                                    <a href="{{ route('admin.banks.set-status',$item->id) }}?status=1" class="btn btn-sm btn-success">Set Aktif</a>
+                                    @endif
                                     <a href="{{ route('admin.banks.edit', $item->id) }}" class="btn btn-sm btn-info"><i class="fas fa-edit"></i></a>
                                     <form action="{{ route('admin.banks.destroy', $item->id) }}" class="d-inline" method="post">
                                         @csrf
@@ -79,6 +92,11 @@
 @if (session('success'))
 <script>
     toastr.success('{{ session('success') }}.')
+</script>
+@endif
+@if (session('error'))
+<script>
+    toastr.error('{{ session('error') }}.')
 </script>
 @endif
 @endpush

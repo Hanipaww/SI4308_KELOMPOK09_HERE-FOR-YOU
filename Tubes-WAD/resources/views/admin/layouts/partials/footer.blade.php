@@ -1,4 +1,11 @@
-<footer class="main-footer">
-    <strong>Copyright &copy; 2021-{{ Carbon\Carbon::now()->format('Y') }} <a href="{{ env('APP_URL') }}">{{ env('APP_NAME') }}</a>.</strong>
-    All rights reserved.
-</footer>
+<!-- Footer -->
+<footer class="page-footer font-small blue">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2022 Copyright:
+      <a href="https://mdbootstrap.com/"> HereForYou.com</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->

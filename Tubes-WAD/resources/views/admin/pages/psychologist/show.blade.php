@@ -34,6 +34,9 @@
                 <b>Email</b> <a class="float-right text-dark small">{{ $item->email }}</a>
               </li>
               <li class="list-group-item">
+                <b>Tarif (Jam)</b> <a class="float-right text-dark small">Rp. {{ number_format($item->price_hourly) }}</a>
+              </li>
+              <li class="list-group-item">
                 <b>Bergabung pada </b></b> <a class="float-right small text-dark">{{ $item->created_at->translatedFormat('l, d F Y') }}</a>
               </li>
               <li class="list-group-item">
@@ -103,7 +106,7 @@
             </div>
             <div class="card-body">
                 <div class="my-2">
-                    <h6>Nilai : <span class="badge badge-success">{{ round($item->reviews->sum('value')/$item->reviews->count(),1) }}</span></h6>
+                    <h6>Nilai : <span class="badge badge-success">{{ $item->rating() }}</span></h6>
                 </div>
                 <table class="table table-striped table-bordered" id="table">
                     <thead>
