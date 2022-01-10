@@ -2,7 +2,7 @@
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
      <div class="text-center user-panel">
-      <img src="{{ asset('assets/image/logohfy1.png') }}" alt="" class="img-fluid">
+      <img src="{{ asset('assets/image/logohfy1.png') }}" style="height:80px; width:80px " alt="" class="img-fluid">
      </div>
     </a>
 

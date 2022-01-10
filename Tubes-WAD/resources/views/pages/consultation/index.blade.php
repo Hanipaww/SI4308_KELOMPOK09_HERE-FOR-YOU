@@ -10,7 +10,7 @@
        @foreach ($psychologists as $psychologist)
        <div class="col-md-3">
             <div class="card">
-                <img src="{{ $psychologist->photo() }}" class="card-img-top" alt="..." style="min-height: 180px">
+                <img src="{{ $psychologist->photo() }}" class="card-img-top" alt="..." style="height: 200px; width: auto">
                 <div class="card-body">
                     <h5 class="card-title">{{ $psychologist->name }}</h5>
                     <p class="card-text">
